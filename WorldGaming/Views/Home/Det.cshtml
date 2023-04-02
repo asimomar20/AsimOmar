@@ -1,0 +1,87 @@
+﻿@model WorldGaming.Models.ProductDet
+
+@{
+}
+
+<style>
+    body{
+    background-color: #edf1f5;
+    margin-top:20px;
+}
+.card {
+    margin-bottom: 30px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid transparent;
+    border-radius: 0;
+}
+.card .card-subtitle {
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #8898aa;
+}
+.table-product.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f3f8fa!important
+}
+.table-product td{
+    border-top: 0px solid #dee2e6 !important;
+    color: #728299!important;
+}
+
+</style>
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">@Model.Products.ProductName</h3>
+            
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div class="white-box text-center"><img style="height:12em" src="@Model.Products.Image" class="img-responsive"></div>
+                </div>
+                
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h3 class="box-title mt-5">General Info</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-product">
+                            <tbody>
+                                <tr>
+                                    <td width="390">Size</td>
+                                    <td>@Model.Size (GB)</td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td>@Model.Type</td>
+                                </tr>
+                                <tr>
+                                    <td>Platform</td>
+                                    <td>@Model.Platform</td>
+                                </tr>
+                                <tr>
+                                    <td>Multiplayer</td>
+                                    <td>@Model.Multiplayer</td>
+                                </tr>
+                           
+                             
+                              
+                            </tbody>
+                        </table>
+
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-Left"><a style="color:blue" class="btn btn-outline-dark mt-auto" href="/Home/Invoice/@Model.Products.Id">Buy Now</a></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

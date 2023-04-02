@@ -1,0 +1,65 @@
+﻿@model WorldGaming.Models.ProductDet
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="card">
+    <div class="card-body mx-4">
+        <div class="container">
+            <p class="my-5 mx-5" style="font-size: 30px;">Thank for your purchase</p>
+            <div class="row">
+                <ul class="list-unstyled">
+                    <li class="text-black">John Doe</li>
+                    <li class="text-muted mt-1"><span class="text-black">Invoice</span> #12345</li>
+                    <li class="text-black mt-1">April 17 2021</li>
+                </ul>
+             
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <p>Game Information:</p>
+                </div>
+                <div class="col-xl-2">
+                    <p class="float-end">
+                        @Model.Products.ProductName
+                    </p>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <p>Total:</p>
+                </div>
+                <div class="col-xl-2">
+                    <p class="float-end">
+                        @Model.Products.ProductPrice
+                    </p>
+                </div>
+                <hr style="border: 2px solid black;">
+            </div>
+            <div class="row text-black">
+
+                <div class="col-xl-12">
+                    <p class="float-end fw-bold">
+                       @Model.Products.ProductPrice
+                </div>
+                <hr style="border: 2px solid black;">
+            </div>
+           
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+
+
+
+
